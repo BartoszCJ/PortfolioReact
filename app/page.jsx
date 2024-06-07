@@ -9,6 +9,7 @@ import { Stats } from "@/components/Stats";
 export const Home = () => {
   const [loading, setLoading] = useState(true);
   const [loadingPhoto, setLoadingPhoto] = useState(true);
+  const [photoSrc, setPhotoSrc] = useState("/assets/waltur.png");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,6 +24,14 @@ export const Home = () => {
     }, 2000);
     return () => clearTimeout(timer1);
   }, []);
+
+  const handlePhotoClick = () => {
+    setPhotoSrc((prevSrc) =>
+      prevSrc === "/assets/waltur.png"
+        ? "/assets/mojavatarrr.png"
+        : "/assets/waltur.png"
+    );
+  };
 
   return (
     <section className="container mx-auto h-full">
@@ -47,6 +56,8 @@ export const Home = () => {
               <p className="max-w-[500px] mb-9 text-white/80">
                 Pasjonuję się tworzeniem aplikacji webowych oraz grafiką
                 wektorową, grafiką 3D, i drukowaniem 3D.
+                <br></br> <br></br>
+                <span className="font-bold">(Proszę kliknąć na psa)</span>
               </p>
             )}
 
@@ -73,7 +84,7 @@ export const Home = () => {
                 <FiLoader className="text-4xl animate-spin" />
               </div>
             ) : (
-              <Photo />
+              <Photo photoSrc={photoSrc} onPhotoClick={handlePhotoClick} />
             )}
           </div>
         </div>
