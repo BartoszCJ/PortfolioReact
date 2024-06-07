@@ -19,12 +19,12 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(40)123 123 123",
+    description: "(+48)123 123 123",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "(xd@email;",
+    description: "Bartosz@email.com;",
   },
   {
     icon: <FaMapMarkedAlt />,
@@ -50,34 +50,36 @@ export const Contact = () => {
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Siema</h3>
-              <p className="text-white/60">Lorem ipsum xd</p>
+              <h3 className="text-4xl text-accent">Formularz kontaktowy</h3>
+              <p className="text-white/60">
+                Wyślij mi wiadomość jak chceż podjąć współprace.
+              </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email adress" />
-                <Input type="phone" placeholder="Phone number" />
+                <Input type="firstname" placeholder="Imie" />
+                <Input type="lastname" placeholder="Nazwisko" />
+                <Input type="email" placeholder="Email" />
+                <Input type="phone" placeholder="Telefon" />
               </div>
               <Select>
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service"></SelectValue>
+                  <SelectValue placeholder="Wybierz temat"></SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">web</SelectItem>
-                    <SelectItem value="cst">modeling</SelectItem>
-                    <SelectItem value="mst">logo design</SelectItem>
+                    <SelectLabel>Wybierz temat</SelectLabel>
+                    <SelectItem value="est">Aplikacja Webowa</SelectItem>
+                    <SelectItem value="cst">Grafika 3D</SelectItem>
+                    <SelectItem value="mst">Stworzenie Loga</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
               <Textarea
                 className="h-[200px]"
-                placeholder="Type you message here"
+                placeholder="Tu napisz wiadomość"
               />
               <Button size="md" className="max-w-40">
-                Send message
+                Wyślij
               </Button>
             </form>
           </div>

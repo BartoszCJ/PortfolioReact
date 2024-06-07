@@ -23,7 +23,7 @@ export const Photo = () => {
           className="absolute inset-0 mix-blend-lighten"
         >
           <Image
-            src="/assets/photo.png"
+            src="/assets/mojavatarrr.png"
             priority
             quality={100}
             layout="fill"

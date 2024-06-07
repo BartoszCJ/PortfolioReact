@@ -7,25 +7,26 @@ const services = [
   {
     num: "01",
     title: `Web Dev`,
-    description: "Lorem LoremLoremLoremLoremLoremLoremLore",
+    description: "Interesuje się aplikacjami webowymi.",
     href: "",
   },
   {
     num: "02",
-    title: `asra`,
-    description: "Lorem EQEQEQE",
+    title: `Blender`,
+    description: "Potrafię robić grafiki 3D w blenderze.",
     href: "",
   },
   {
     num: "03",
-    title: `xddddd`,
-    description: "Lorem XAXAXAXXAXA",
+    title: `Adobe Ilustrator`,
+    description: "Umiem robić grafiki wektorowe w Adobe Ilustratorze.",
     href: "",
   },
   {
     num: "04",
-    title: `EEEEE`,
-    description: "SADASDASDADSDSASDADASDASASDSDADAS",
+    title: `C#`,
+    description:
+      "Potrafie stworzyć aplikacje desktopową wykorzystującą baze danych, oraz proste skrypty w grach.",
     href: "",
   },
 ];

@@ -4,24 +4,20 @@ import React from "react";
 
 const stats = [
   {
-    num: 12,
-    text: "Years",
+    num: 3,
+    text: "Lata nauki",
   },
   {
-    num: 26,
-    text: "Projects",
+    num: 9,
+    text: "Aplikaci webowych",
   },
   {
-    num: 12,
-    text: "Years",
+    num: 21,
+    text: "Modeli 3D",
   },
   {
-    num: 2,
-    text: "xddd",
-  },
-  {
-    num: 12334,
-    text: "eeqw",
+    num: 32,
+    text: "Grafiki Wektorowe",
   },
 ];
 

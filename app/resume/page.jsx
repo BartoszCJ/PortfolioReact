@@ -6,46 +6,38 @@ import {
   FaJs,
   FaReact,
   FaFigma,
+  FaBlender,
+  FaPhotoVideo,
   FaNodeJs,
+  FaUnity,
+  FaDocker,
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 const about = {
-  title: "About me",
-  description: "Lorem ipsum xddeaea",
+  title: "O mnie",
+  description: "Mam 23 lata i za kilka miesięcy kończe studia.",
   info: [
     {
-      fieldName: "Name",
-      fieldValue: "Bartosz K",
-    },
-    {
-      fieldName: "Phone",
-      fieldValue: "(50) 123 123 123",
-    },
-    {
-      fieldName: "Experience",
-      fieldValue: "12 lat",
+      fieldName: "Imie",
+      fieldValue: "Bartosz",
     },
     {
       fieldName: "Skype",
-      fieldValue: "luk",
-    },
-    {
-      fieldName: "Nationality",
-      fieldValue: "Pol",
+      fieldValue: "Bartosz.Skype",
     },
     {
       fieldName: "Email",
-      fieldValue: "xdsxds@xds",
+      fieldValue: "Bartosz@email.com",
     },
     {
       fieldName: "Freelance",
-      fieldValue: "Takje",
+      fieldValue: "Tak jest",
     },
     {
-      fieldName: "Languages",
-      fieldValue: "Polski,Angielski",
+      fieldName: "Język",
+      fieldValue: "Polski, Angielski",
     },
   ],
 };
@@ -53,61 +45,67 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Moje doswiadczenie",
-  description: "lorem ipsum xdxdas asda",
+  description: "No, narazie to nie ma ale w przyszłości będzie.",
   items: [
     {
-      company: "tech solitions",
-      position: "Fullstack",
-      duration: "2022 - teraz",
-    },
-    {
-      company: "amazon",
-      position: "omg nie wiem",
-      duration: "2022 - teraz",
-    },
-    {
-      company: "cos tam jes",
-      position: "asdsad",
-      duration: "resume page usun to",
+      company: "Jakaś firma",
+      position: "Staż",
+      duration: "2024",
     },
   ],
 };
 
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "Moje edukacja",
-  description: "lorem ipsum xdxdas asda",
+  title: "Moja edukacja",
+  description: "",
   items: [
     {
-      institution: "Ubb bielsko bialaaa",
-      degree: "cos tam cos tam",
+      institution: "UBB",
+      degree: "Inżynier z informatyki",
+      duration: "2025",
+    },
+    {
+      institution: "Pz2 Pszczyna",
+      degree: "Technik Informatyk",
+      duration: "2021",
+    },
+    {
+      institution: "Cisco Web",
+      degree: "Kurs sieci Cisco",
       duration: "2023",
     },
     {
-      institution: "kurs",
-      degree: "cos tam cos tam",
-      duration: "2023",
-    },
-    {
-      institution: "szkoła",
-      degree: "cos tam cos tam",
-      duration: "2023",
-    },
-    {
-      institution: "nwm",
-      degree: "cos tam cos tam",
-      duration: "2023",
+      institution: "PLC",
+      degree: "Programowanie PLC",
+      duration: "2024",
     },
   ],
 };
 
 const skills = {
   title: "Moje umiejętnosci",
-  description: "Lorem xdxd",
+  description: "W tych technologiach potrafie coś zrobić.",
   skillList: [
     {
       icon: <FaHtml5 />,
       name: "html 5",
+    },
+    {
+      icon: <FaDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <FaUnity />,
+      name: "Unity",
+    },
+    {
+      icon: <FaBlender />,
+      name: "Blender",
+    },
+    {
+      icon: <FaPhotoVideo />,
+      name: "Adobe Illustrator",
     },
     {
       icon: <FaCss3 />,
@@ -168,12 +166,12 @@ export const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="experience">Doświadczenie</TabsTrigger>
 
-            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="education">Edukacja</TabsTrigger>
 
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+            <TabsTrigger value="skills">Umiejętności</TabsTrigger>
+            <TabsTrigger value="about">O mnie</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
@@ -221,7 +219,7 @@ export const Resume = () => {
                         >
                           <span className="text-accent">{item.degree}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
+                            {item.duration}
                           </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>

@@ -1,21 +1,54 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
+import { FiDownload, FiLoader } from "react-icons/fi";
 import { Social } from "@/components/Social";
 import { Photo } from "@/components/Photo";
 import { Stats } from "@/components/Stats";
 
 export const Home = () => {
+  const [loading, setLoading] = useState(true);
+  const [loadingPhoto, setLoadingPhoto] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadingPhoto(false);
+    }, 3500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const timer1 = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timer1);
+  }, []);
+
   return (
     <section className="container mx-auto h-full">
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl"> Software Developer</span>
-            <h1 className="h1">
-              Hello I'm <br /> <span className="text-accent">Bartosz</span>
-            </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">Elo elo elo</p>
+            <span className="text-xl">Software Developer</span>
+            {loading ? (
+              <div className="flex items-center justify-center h-16">
+                <FiLoader className="text-xl animate-spin" />
+              </div>
+            ) : (
+              <h1 className="h1">
+                Hej jestem, <br /> <span className="text-accent">Bartosz</span>
+              </h1>
+            )}
+            {loading ? (
+              <div className="flex items-center justify-center h-16">
+                <FiLoader className="text-xl animate-spin" />
+              </div>
+            ) : (
+              <p className="max-w-[500px] mb-9 text-white/80">
+                Pasjonuję się tworzeniem aplikacji webowych oraz grafiką
+                wektorową, grafiką 3D, i drukowaniem 3D.
+              </p>
+            )}
 
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
@@ -23,7 +56,7 @@ export const Home = () => {
                 size="lg"
                 className="uppercase flex items-center gap-2"
               >
-                <span>Download CV</span>
+                <span>Tu będzie moje CV</span>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 xl:ml-0 my-7">
@@ -35,11 +68,17 @@ export const Home = () => {
             </div>
           </div>
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
-            <Photo />
+            {loadingPhoto ? (
+              <div className="flex items-center justify-center h-64 w-64 bg-gray-200 rounded-full">
+                <FiLoader className="text-4xl animate-spin" />
+              </div>
+            ) : (
+              <Photo />
+            )}
           </div>
         </div>
       </div>
-      <Stats/>
+      <Stats />
     </section>
   );
 };

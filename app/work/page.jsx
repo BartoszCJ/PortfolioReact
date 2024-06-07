@@ -18,32 +18,62 @@ import { WorkSliderBtns } from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project1",
-    description: "Lorem impsum xd",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
+    category: "Zaprojektowanie sklepu",
+    title: "Projekt 1",
+    description: "",
+    stack: [
+      { name: "Figma" },
+      { name: "Css 3" },
+      { name: "Javascript" },
+      { name: "Html 5" },
+    ],
+    image: "/assets/work/robota1.png",
     live: "",
     github: "",
   },
   {
     num: "02",
-    category: "fullstack",
-    title: "project 2",
-    description: "Lorem impsum xd",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/thumb2.png",
+    category: "Aplikacja webowa",
+    title: "Projekt 2",
+    description: "Webowa aplikacja do liczenia kalorii",
+    stack: [{ name: "Vite" }, { name: "Tailwind.css" }, { name: "Node.js" }],
+    image: "/assets/work/robota2.png",
     live: "",
     github: "",
   },
 
   {
     num: "03",
-    category: "frontend",
-    title: "project 3",
-    description: "Lorem impsum xd",
-    stack: [{ name: "Next" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb3.png",
+    category: "Grafika 3D",
+    title: "Projekt 3",
+    description: "Ponczek",
+    stack: [{ name: "Blender" }],
+    image: "/assets/work/robota3.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "Grafika Wektorowa",
+    title: "Projekt 4",
+    description: "Porsche jako grafika wektorowa",
+    stack: [{ name: "Adobe Illustrator" }],
+    image: "/assets/work/robota4.png",
+    live: "",
+    github: "",
+  },
+  {
+    num: "05",
+    category: "Grafika 3D",
+    title: "Projekt 5",
+    description:
+      "Odwzorowanie 1:1 skrzyni używanej w drugiej wojnie światowej oraz wydrukowanie jej w skali 1:35",
+    stack: [
+      { name: "Blender" },
+      { name: "3D builder" },
+      { name: "Fusion 360" },
+    ],
+    image: "/assets/work/robota5.png",
     live: "",
     github: "",
   },
@@ -97,7 +127,7 @@ export const Work = () => {
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live project</p>
+                        <p>Link do projektu</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -110,14 +140,13 @@ export const Work = () => {
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github Repo</p>
+                        <p>Link do repo githuba</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
               </div>
             </div>
-            text
           </div>
           <div className="w-full xl:w-[50%]">
             <Swiper
